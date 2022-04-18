@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ecommerce</title>
+
+  <title>sumit</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<style>
+  #bg{
+    background-repeat: no-repeat;
+    background-size:1800px 900px;
+    background-position:top;
+    background-attachment:fixed;
+  }
+</style>
+
+<body id="bg" style="background-image:url('{% static 'images/Background.jpg'%}');">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">“This is Cloud DevOpsSec Project for any query email on x20180837@student.ncirl.ie” </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+
+</html>
