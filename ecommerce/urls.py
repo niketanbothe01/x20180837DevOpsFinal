@@ -11,6 +11,8 @@ from django.urls import path
 from ecom import views
 from django.contrib.auth.views import LoginView,LogoutView
 from django.conf.urls.static import static
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home_view,name=''),
@@ -56,4 +58,4 @@ urlpatterns = [
     path('payment-success', views.payment_success_view,name='payment-success'),
 
 
-]
+] + static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
