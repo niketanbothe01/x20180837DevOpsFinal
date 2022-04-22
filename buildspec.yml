@@ -11,7 +11,7 @@ phases:
     pre_build:
         commands:
             - python --version
-            - pylint --disable=C *.py **/*.py
+            - pylint --disable=R0903 *.py **/*.py
 artifacts:
     files:
         - '**/*'

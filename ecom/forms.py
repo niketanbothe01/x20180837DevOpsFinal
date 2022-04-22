@@ -4,7 +4,7 @@ from . import models
 
 
 class CustomerUserForm(forms.ModelForm):
-    class _Meta:
+    class Meta:
         model=User
         fields=['first_name','last_name','username','password']
         widgets = {
