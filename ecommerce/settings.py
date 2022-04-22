@@ -129,6 +129,8 @@ STATICFILES_DIRS=[STATIC_DIR,]
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'static')
 
+#changes
+static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)
 
 
 LOGIN_REDIRECT_URL='/afterlogin'
