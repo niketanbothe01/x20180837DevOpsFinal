@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
     install:
         runtime-versions:
@@ -9,9 +10,8 @@ phases:
             - pip install -r requirements.txt pylint
     pre_build:
         commands:
-        - python --version
-        - pylint $CODEBUILD_SRC_DIR/*.py
-        - pylint $CODEBUILD_SRC_DIR/demoproj/*.py
+            - python --version
+            - pylint --disable=C *.py **/*.py
 artifacts:
     files:
         - '**/*'

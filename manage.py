@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    """Function printing python version."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ecommerce.settings')
     try:
         from django.core.management import execute_from_command_line
