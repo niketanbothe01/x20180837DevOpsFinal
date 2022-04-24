@@ -8,7 +8,16 @@
 
 </head>
 
-<body>
+<style>
+  #bg{
+    background-repeat: no-repeat;
+    background-size:1800px 900px;
+    background-position:top;
+    background-attachment:fixed;
+  }
+</style>
+
+<body id="bg" style="background-image:url('{% static 'images/Background.jpg'%}');">
   {%if request.user.is_authenticated%}
     {% include "ecom/customer_navbar.html" %}
   {%else%}
